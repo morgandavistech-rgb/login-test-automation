@@ -1,129 +1,125 @@
-# Selenium Java Automation Framework
+# 🔐 Login Test Automation | Java + Selenium
 
-A modern, scalable, and parallel‑ready automation framework built using Java 21, Selenium 4, TestNG, Extent Reports, and WebDriverManager. Designed for UI test automation with a clean Page Object Model (POM) architecture and support for Chrome and Edge browsers.
+### Welcome to my QA Automation Lab! 👩🏽‍💻✨
 
-🚀 Features
+**Great software doesn't happen by accident. It gets tested.**
 
-- Java 21
-- Selenium 4
-- TestNG
-- Parallel execution using ThreadLocal WebDriver
-- Modern Page Object Model (POM) using By locators
-- Extent Reports for rich HTML reporting
-- Chrome & Edge browser support
-- Config-driven (`src/main/resources/config.properties`)
-- Reusable utilities (WaitUtils, ConfigReader)
-- Clean project structure
-- Easy to extend for API, mobile, or CI/CD
+Welcome to my Login Test Automation project! I'm a Software Quality Engineer passionate about building reliable applications, catching defects before users encounter them, and making software testing smarter through automation.
 
-## Project Structure
+This project showcases my approach to designing, organizing, and executing automated UI tests using **Java, Selenium WebDriver, TestNG, and Maven**.
 
-Selenium-Java-Framework/
-├── src/main/java/
-│   ├── base/               # BaseTest with parallel execution + reporting
-│   ├── driver/             # DriverFactory (Chrome + Edge)
-│   ├── pages/              # Page Objects (modern style)
-│   ├── utils/              # WaitUtils, ConfigReader, Logger
-│   └── reports/            # ExtentManager
-│
-├── src/main/resources/
-│   ├── config.properties   # Browser + base URL
-   └── testdata/           # JSON test data (optional)
-│
-├── src/test/java/
-│   ├── tests/              # TestNG test classes
-│   └── testng.xml          # Parallel execution config
-│
-├── pom.xml
-└── README.md
-
-## Tech Stack
-
-- Language: Java 21
-- UI Automation: Selenium WebDriver 4
-- Test Runner: TestNG
-- Reporting: Extent Reports
-- Browser Drivers: WebDriverManager
-- Build Tool: Maven
-
-## Setup Instructions
-
-1. Install Requirements
-
-- Java 21
-- Maven
-- VS Code (recommended)
-- Java Extension Pack (if using VS Code)
-- Chrome or Edge browser
-
-2. Clone the Repository
-
-```powershell
-git clone https://github.com/<your-username>/selenium-java-framework.git
-cd selenium-java-framework
-```
-
-3. Update Configuration
-
-Edit `src/main/resources/config.properties` and set your preferred values. Example:
-
-```properties
-browser=chrome
-baseUrl=https://the-internet.herokuapp.com
-implicitWait=10
-explicitWait=15
-```
-
-Switch to Edge by changing:
-
-```properties
-browser=edge
-```
-
-4. Run Tests
-
-Using Maven (from project root):
-
-```powershell
-mvn clean test
-```
-
-Or run the TestNG suite directly from your IDE by running `testng.xml` (right-click → Run).
-
-## Reports
-
-After execution, Extent Report is generated (example path):
-
-```
-test-output/ExtentReport.html
-```
-
-Open it in a browser to view test steps, pass/fail status, screenshots on failure (if configured), execution time and parallel logs.
-
-## Included Test Scenarios (examples)
-
-- Login Tests
-  - Valid login
-  - Invalid login
-- Dropdown Tests
-  - Select Option 1
-- Checkbox Tests
-  - Validate checkbox selection
-
-## Future Enhancements
-
-- API automation using Rest Assured
-- GitHub Actions CI pipeline
-- Dockerized Selenium Grid
-- Allure Reports (optional)
-- Data-driven testing (JSON/Excel)
-
-## Author
-
-Arunkumaran Pasupathi
-Automation Engineer | Java | Selenium | API | CI/CD
-GitHub: https://github.com/Saint-1987
+The mission? Simple: **Test smarter. Catch bugs earlier. Deliver with confidence.** 🚀
 
 ---
 
+## 🛠️ My Automation Toolkit
 
+| Technology | Purpose |
+|---|---|
+| ☕ Java | Automation programming language |
+| 🌐 Selenium WebDriver | Browser interaction and UI automation |
+| 🧪 TestNG | Test organization and execution |
+| 📦 Maven | Dependency management and build configuration |
+| 🏗️ Page Object Model | Separation of page elements and test logic |
+| 📊 ExtentReports | Test execution reporting |
+| 📁 CSV | External test data management |
+| 💻 VS Code | Development environment |
+
+## 🎯 What's Being Tested?
+
+This project focuses on automating the login functionality of a practice web application.
+
+The framework is designed to demonstrate how UI tests can be organized with reusable components, external test data, and reporting utilities.
+
+Rather than placing every automation step into one large test script, the project separates responsibilities across multiple classes.
+
+**Because maintainable automation is just as important as making a test pass.**
+
+## 🏗️ Behind the Automation
+
+The project includes several components that support a structured automation approach:
+
+- **LoginTest.java:** Login test execution
+- **LoginActions.java:** Reusable login actions
+- **LoginObjects.java:** Login page objects
+- **BaseTest.java:** Shared test setup and functionality
+- **DriverFactory.java:** Browser driver management
+- **TestDataReader.java:** External test data handling
+- **WaitUtils.java:** Synchronization utilities
+- **ExtentManager.java:** Reporting support
+- **Logger.java:** Logging utilities
+
+## 📂 Project Structure
+
+```text
+login-test-automation/
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── actions/
+│   │   │   ├── base/
+│   │   │   ├── driver/
+│   │   │   ├── pages/
+│   │   │   ├── reports/
+│   │   │   └── utils/
+│   │   └── resources/
+│   │       ├── config.properties
+│   │       └── loginData.csv
+│   └── test/
+│       └── java/
+│           └── tests/
+│               ├── LoginTest.java
+│               └── testng.xml
+└── README.md
+```
+
+## ▶️ Running the Automation
+
+**Prerequisites**
+
+- Java JDK
+- Maven
+- Compatible web browser
+- Browser driver configuration supported by the project
+
+**Getting Started**
+
+1. Clone this repository.
+2. Open the project in VS Code or another Java-compatible IDE.
+3. Install the Maven dependencies.
+4. Review `config.properties` for environment configuration.
+5. Run the tests using the project's configured TestNG execution setup.
+
+Test results can be reviewed using the reporting functionality included in the framework.
+
+## 💡 What This Project Demonstrates
+
+Beyond automating a login page, this project reflects important quality engineering practices:
+
+- Building reusable test automation components
+- Organizing UI automation using the Page Object Model
+- Separating test data from test logic
+- Managing dependencies with Maven
+- Structuring test execution with TestNG
+- Supporting troubleshooting through logging and reporting
+
+## 👩🏽‍💻 Meet the Engineer Behind the Tests
+
+**Morgan Davis | Software Quality Engineer**
+
+Howdy! I'm a quality-focused technology professional with nearly six years of experience in software testing and quality engineering.
+
+My professional background includes manual and automated testing, Agile collaboration, defect management, test planning, and supporting software releases.
+
+I enjoy the intersection of technical problem-solving and user experience, where thoughtful testing helps transform complex software into dependable products.
+
+This repository is part of my growing automation portfolio, where I demonstrate my technical skills, strengthen my framework development practices, and continue exploring modern quality engineering techniques.
+
+**Thanks for stopping by! Feel free to explore the code.** 🚀
+
+---
+
+### ✨ My QA Philosophy
+
+*Quality isn't just about finding what's broken. It's about building confidence in what works.*
